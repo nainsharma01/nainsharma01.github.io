@@ -236,8 +236,8 @@ a:hover {
 
 .profile-contact__popover--wechat img {
   display: block;
-  width: 10rem;
-  height: 10rem;
+  width: 11rem;
+  height: auto;
   border-radius: 4px;
 }
 
@@ -300,18 +300,6 @@ a:hover {
 }
 
 /* ---------- research: hover-to-reveal citations ---------- */
-
-.research-heading {
-  display: flex;
-  align-items: baseline;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.research-heading__note {
-  color: var(--muted-color);
-  font-size: 0.75rem;
-}
 
 .research-summary {
   display: flex;
@@ -396,7 +384,7 @@ a:hover {
   border-bottom: none;
 }
 
-.compact-list li span:last-child {
+.compact-list li > span:last-child {
   color: var(--muted-color);
   font-size: 0.75rem;
   white-space: nowrap;
@@ -522,6 +510,11 @@ a:hover {
   color: var(--muted-color);
   font-size: 0.8125rem;
   max-width: 38rem;
+}
+
+.publication-placeholder {
+  color: var(--muted-color);
+  font-size: 0.875rem;
 }
 
 /* ---------- footer ---------- */

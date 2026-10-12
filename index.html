@@ -6,12 +6,12 @@
     <title>Zhiyu Tang · 唐之宇</title>
     <meta
       name="description"
-      content="Personal academic homepage of Ming Chen — PhD student researching perception, reasoning, and embodied intelligence."
+      content="Personal academic homepage of Zhiyu Tang (唐之宇) — graduate student at NUDT researching physics-guided controllable 3D geometry generation."
     >
-    <meta property="og:title" content="Ming Chen · 陈明">
+    <meta property="og:title" content="Zhiyu Tang · 唐之宇">
     <meta
       property="og:description"
-      content="Personal academic homepage of Ming Chen — PhD student researching perception, reasoning, and embodied intelligence."
+      content="Personal academic homepage of Zhiyu Tang (唐之宇) — graduate student at NUDT researching physics-guided controllable 3D geometry generation."
     >
     <meta property="og:type" content="profile">
     <meta property="og:image" content="assets/images/portrait.svg">
@@ -32,42 +32,48 @@
     <main class="site-shell" id="main-content" tabindex="-1">
       <!-- ============================================================
            头像 · 姓名 · 简介 · 链接
-           PROFILE: 所有「示例数据」都请替换成你自己的信息
            ============================================================ -->
       <header class="profile-header" aria-labelledby="profile-name">
         <div class="profile-header__layout">
           <div class="profile-identity">
             <div class="profile-name-row">
-              <h1 id="profile-name">Ming Chen</h1>
-              <span class="profile-name-zh" lang="zh-Hans">陈明</span>
+              <h1 id="profile-name">Zhiyu Tang</h1>
+              <span class="profile-name-zh" lang="zh-Hans">唐之宇</span>
             </div>
           </div>
 
           <div class="profile-introduction">
             <p>
-              I am a <span class="profile-introduction__highlight">PhD student</span> at
-              <a href="#" target="_blank" rel="noreferrer">Xinghuo University</a>
-              (星火大学，示例院校), supervised by
-              <a href="#" target="_blank" rel="noreferrer">Prof. Someone</a>.
-              I received my B.S. from
-              <a href="#" target="_blank" rel="noreferrer">Another University</a>.
+              I am a Ph.D. student at
+              <a href="https://www.nudt.edu.cn" target="_blank" rel="noreferrer">National
+              University of Defense Technology (NUDT)</a>
+              <span lang="zh-Hans">（国防科技大学）</span>, supervised by
+              <!-- 若导师有个人主页，把下一行的 <span> 换成 <a href="导师主页"> 即可 -->
+              <span>Prof. Tiejun Li <span lang="zh-Hans">(黎铁军)</span></span>.
+              I also work closely with
+              <!-- 这两位如有个人主页，把 <span> 换成 <a href="主页地址"> 即可 -->
+              <span>Zhang Xiaoya</span> and
+              <span>Prof. Yao Wen</span>.
+              I received my B.S. from NUDT in 2025.
             </p>
             <p>
-              My research interest lies in the intersection of
-              <span class="profile-introduction__highlight">computer vision</span>,
-              <span class="profile-introduction__highlight">machine learning</span>, and
-              <span class="profile-introduction__highlight">robotics</span>.
+              My research focuses on
+              <span class="profile-introduction__highlight">physics-guided controllable 3D
+              geometry generation</span>
+              <span lang="zh-Hans">（物理引导的可控三维几何生成）</span> — building generative
+              models that create geometric shapes which are not only visually plausible, but
+              physically valid, editable, and realizable.
             </p>
           </div>
 
-          <!-- 链接行：点击 Email 直接复制地址；WeChat 悬停/点击显示二维码 -->
+          <!-- 链接行：点击 Email 直接复制地址 -->
           <nav class="profile-links" aria-label="Academic profiles">
             <span class="profile-contact">
               <button
                 class="profile-link profile-link--button"
                 type="button"
                 data-copy-email
-                data-email="ming.chen@example.com"
+                data-email="tangzhiyu21@nudt.edu.cn"
                 aria-describedby="email-tooltip"
                 aria-label="Copy email address"
               >Email</button>
@@ -76,24 +82,14 @@
                 id="email-tooltip"
                 role="tooltip"
                 data-email-tooltip
-              >ming.chen@example.com</span>
+              >tangzhiyu21@nudt.edu.cn</span>
             </span>
 
-            <span class="profile-links__separator" aria-hidden="true">/</span>
-            <a class="profile-link" href="#" target="_blank" rel="noreferrer">CV</a>
-
+            <!-- 悬停 / 点击 WeChat 显示二维码；点击 Email 复制邮箱 -->
             <span class="profile-links__separator" aria-hidden="true">/</span>
             <a
               class="profile-link"
-              href="https://scholar.google.com"
-              target="_blank"
-              rel="noreferrer"
-            >Scholar</a>
-
-            <span class="profile-links__separator" aria-hidden="true">/</span>
-            <a
-              class="profile-link"
-              href="https://github.com"
+              href="https://github.com/tky520"
               target="_blank"
               rel="noreferrer"
             >GitHub</a>
@@ -107,50 +103,63 @@
                 aria-describedby="wechat-tooltip"
                 aria-controls="wechat-tooltip"
                 aria-expanded="false"
-                aria-label="Show WeChat QR code"
+                aria-label="Show Zhiyu Tang's WeChat QR code"
               >WeChat</button>
               <span
                 class="profile-contact__popover profile-contact__popover--wechat"
                 id="wechat-tooltip"
                 role="tooltip"
               >
-                <!-- 替换为你的微信二维码图片（assets/images/wechat-qr.svg → 你的 png） -->
+                <span class="visually-hidden">Preview of Zhiyu Tang's WeChat QR code.</span>
                 <img
                   data-wechat-qr
-                  src="assets/images/wechat-qr.svg"
-                  alt="WeChat QR code"
-                  width="160"
-                  height="160"
+                  src="assets/images/wechat-qr.png"
+                  alt=""
+                  width="589"
+                  height="627"
                   loading="lazy"
                   decoding="async"
                 >
               </span>
             </span>
 
+            <!-- 有了下面这些链接后，解开注释并把地址换成你自己的：
+            <span class="profile-links__separator" aria-hidden="true">/</span>
+            <a class="profile-link" href="assets/Zhiyu-Tang-CV.pdf" target="_blank" rel="noreferrer">CV</a>
+
+            <span class="profile-links__separator" aria-hidden="true">/</span>
+            <a class="profile-link" href="https://scholar.google.com/citations?user=XXXX" target="_blank" rel="noreferrer">Scholar</a>
+            -->
+
             <span class="visually-hidden" aria-live="polite" data-copy-status></span>
           </nav>
 
-          <!-- 头像：悬停切换到第二张图（两张图均可替换为自己的照片） -->
+          <!-- 头像：悬停切换到第二张图。替换 assets/images/portrait.svg 为你的照片，
+               并把下面的 src 改成对应文件名（如 assets/images/photo.jpg） -->
           <figure
             class="profile-portrait"
             role="img"
-            aria-label="Portrait of Ming Chen; hover or focus to reveal an alternate illustration."
+            aria-label="Portrait of Zhiyu Tang; hover or focus to reveal an alternate illustration."
             tabindex="0"
           >
+            <!-- 头像：悬停切换到第二张图。
+                 object-position 用于把取景窗对准人脸（这张照片人脸偏右），
+                 换成标准正脸照后可删掉 style -->
             <img
               class="profile-portrait__image profile-portrait__image--primary"
-              src="assets/images/portrait.svg"
+              src="assets/images/portrait.jpg"
               alt=""
-              width="300"
-              height="400"
+              width="1200"
+              height="900"
+              style="object-position: 100% 50%"
               decoding="async"
             >
             <img
               class="profile-portrait__image profile-portrait__image--alternate"
-              src="assets/images/portrait-alt.svg"
+              src="assets/images/portrait-alt.jpg"
               alt=""
-              width="400"
-              height="400"
+              width="460"
+              height="460"
               decoding="async"
               aria-hidden="true"
             >
@@ -165,93 +174,80 @@
       <section class="content-section research" aria-labelledby="research-title">
         <div class="research-heading">
           <h2 class="section-title" id="research-title" tabindex="0">Research</h2>
-          <span class="research-heading__note" role="note" lang="zh-Hans">
-            ※ 悬停语句可查看引文 · Hover to reveal citations
-          </span>
         </div>
 
         <div class="research-summary">
           <p class="research-vision" tabindex="0" aria-describedby="research-vision-note">
-            I want to build intelligent systems that
-            <strong>perceive the physical world, reason about what they see, and act to
-            change it</strong>. My long-term goal is to close the loop from sensing to
-            understanding to interaction — making machines that not only model the world,
-            but truly live in it.
+            I want to teach generative models the physics of shape — so the geometry they
+            create is <strong>controllable by intent, constrained by physics, and ready for
+            the real world</strong>. Rather than shapes that merely look right, my goal is
+            generation that is right: faithful to forces, valid under constraints, and
+            editable by design.
           </p>
           <blockquote
             class="research-hover-note research-vision__note"
             id="research-vision-note"
             lang="zh-Hans"
           >
-            <p>路漫漫其修远兮，吾将上下而求索。<cite>屈原《离骚》</cite></p>
+            <p>形而上者谓之道，形而下者谓之器。<cite>《周易·系辞上》</cite></p>
           </blockquote>
 
           <div class="research-point">
             <p class="research-goal" tabindex="0" aria-describedby="research-point-1-note">
               <span class="research-goal__marker" aria-hidden="true">&#9656;</span>
-              <strong>Perceive.</strong> Helping machines see structure beneath appearance —
-              geometry, pose, and semantics — from images, videos, and point clouds, with a
-              current focus on open-vocabulary 3D scene understanding.
+              <strong>Represent.</strong> Studying structured 3D representations — meshes,
+              B-Reps, and CAD construction sequences — that keep generated geometry compact,
+              editable, and faithful to engineering intent.
             </p>
             <blockquote
               class="research-hover-note research-point__note"
               id="research-point-1-note"
               lang="zh-Hans"
             >
-              <p>格物致知，诚意正心。<cite>《礼记·大学》</cite></p>
+              <p>圣人立象以尽意。<cite>《周易·系辞上》</cite></p>
             </blockquote>
           </div>
 
           <div class="research-point">
             <p class="research-goal" tabindex="0" aria-describedby="research-point-2-note">
               <span class="research-goal__marker" aria-hidden="true">&#9656;</span>
-              <strong>Reason.</strong> Studying how large models can reason over structured
-              knowledge — graphs, programs, and tools — so that their chain of thought is
-              grounded, verifiable, and efficient.
+              <strong>Generate.</strong> Developing controllable generative frameworks, such
+              as diffusion and autoregressive models, driven by explicit conditions —
+              sketches, parameters, and constraints — and guided by physical priors such as
+              forces, materials, and stability.
             </p>
             <blockquote
               class="research-hover-note research-point__note"
               id="research-point-2-note"
               lang="zh-Hans"
             >
-              <p>学而不思则罔，思而不学则殆。<cite>《论语·为政》</cite></p>
+              <p>生生之谓易。<cite>《周易·系辞上》</cite></p>
             </blockquote>
           </div>
 
           <div class="research-point">
             <p class="research-goal" tabindex="0" aria-describedby="research-point-3-note">
               <span class="research-goal__marker" aria-hidden="true">&#9656;</span>
-              <strong>Act.</strong> Closing the gap between pixels and actions through embodied
-              agents and robot learning, letting systems improve through interaction with the
-              real world rather than static datasets.
+              <strong>Realize.</strong> Closing the loop between generation and the physical
+              world by validating generated geometry with physics simulation and
+              manufacturability analysis, so that what is designed can actually be made.
             </p>
             <blockquote
               class="research-hover-note research-point__note"
               id="research-point-3-note"
               lang="zh-Hans"
             >
-              <p>知者行之始，行者知之成。<cite>王阳明《传习录》</cite></p>
+              <p>纸上得来终觉浅，绝知此事要躬行。<cite>陆游《冬夜读书示子聿》</cite></p>
             </blockquote>
           </div>
         </div>
       </section>
 
       <!-- ============================================================
-           News：动态列表（左：内容，右：时间）
-           ============================================================ -->
-      <section class="content-section compact-list" aria-labelledby="news-title">
-        <h2 class="section-title" id="news-title">News</h2>
-        <ul>
-          <li><span>One paper accepted to <strong>CVPR 2026</strong>.</span><span>2026.10</span></li>
-          <li><span>Give a talk at Somewhere Lab.</span><span>2026.09</span></li>
-          <li><span>One paper accepted to <strong>NeurIPS 2025</strong> (<strong>Oral</strong>).</span><span>2025.09</span></li>
-          <li><span>Started my PhD journey at Xinghuo University.</span><span>2024.09</span></li>
-        </ul>
-      </section>
-
-      <!-- ============================================================
-           Publications：论文列表
-           标记说明：* 共同一作 · † 通讯作者 · ⚑ 项目负责人
+           Publications：板块结构已就位（参考 attractor.do）。
+           标记说明行保留；论文出来后，从 templates/publications.html
+           复制 <article class="publication"> 块放进 publication-list，
+           替换下面的占位段落即可（最新的放最前面）。
            ============================================================ -->
       <section class="content-section" aria-labelledby="publications-title">
         <h2 class="section-title" id="publications-title">Publications</h2>
@@ -262,225 +258,37 @@
         </p>
 
         <div class="publication-list">
-          <!-- PUBLICATION 1（最新论文放最前） -->
-          <article class="publication">
-            <div class="publication-media-cell">
-              <div class="publication-media" data-publication-media>
-                <a
-                  class="publication-media__link"
-                  href="#"
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label="Open the SceneLang paper"
-                >
-                  <img
-                    src="assets/images/publications/scenelang.svg"
-                    alt="SceneLang teaser: concentric perception rings over a scene"
-                    width="320"
-                    height="320"
-                    decoding="async"
-                  >
-                </a>
-              </div>
-            </div>
-
-            <div class="publication-body">
-              <h3 class="publication-title">
-                <a href="#" target="_blank" rel="noreferrer">
-                  SceneLang: Open-Vocabulary 3D Scene Understanding with Language Grounding
-                </a>
-              </h3>
-              <p class="publication-authors">
-                <strong>Ming Chen</strong><sup>*</sup>, Someone Wang<sup>*</sup>, Another Li,
-                Yusheng Zhang<sup>†</sup>
-              </p>
-              <p class="publication-venue">
-                <em>IEEE/CVF Conference on Computer Vision and Pattern Recognition
-                <strong>(CVPR)</strong>, 2026</em>
-              </p>
-              <div class="publication-actions" aria-label="Links for SceneLang">
-                <a href="#" target="_blank" rel="noreferrer">paper</a>
-                <span aria-hidden="true">|</span>
-                <a href="#" target="_blank" rel="noreferrer">arXiv</a>
-                <span aria-hidden="true">|</span>
-                <a href="#" target="_blank" rel="noreferrer">code</a>
-              </div>
-              <p class="publication-summary">
-                One-sentence summary: grounding free-form language queries into compositional 3D
-                scene structures.（示例条目，请替换）
-              </p>
-            </div>
-          </article>
-
-          <!-- PUBLICATION 2 -->
-          <article class="publication">
-            <div class="publication-media-cell">
-              <div class="publication-media" data-publication-media>
-                <a
-                  class="publication-media__link"
-                  href="#"
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label="Open the ReasonGraph paper"
-                >
-                  <img
-                    src="assets/images/publications/reasongraph.svg"
-                    alt="ReasonGraph teaser: a reasoning graph of connected nodes"
-                    width="320"
-                    height="320"
-                    loading="lazy"
-                    decoding="async"
-                  >
-                </a>
-              </div>
-            </div>
-
-            <div class="publication-body">
-              <h3 class="publication-title">
-                <a href="#" target="_blank" rel="noreferrer">
-                  ReasonGraph: Structured Chain-of-Thought Reasoning with Knowledge Graphs
-                </a>
-              </h3>
-              <p class="publication-authors">
-                Someone Wang<sup>*</sup>, <strong>Ming Chen</strong><sup>*</sup>, Yusheng
-                Zhang<sup>†</sup>
-              </p>
-              <p class="publication-venue">
-                <em>Conference on Neural Information Processing Systems
-                <strong>(NeurIPS)</strong>, 2025 (Oral)</em>
-              </p>
-              <div class="publication-actions" aria-label="Links for ReasonGraph">
-                <a href="#" target="_blank" rel="noreferrer">paper</a>
-                <span aria-hidden="true">|</span>
-                <a href="#" target="_blank" rel="noreferrer">code</a>
-                <span aria-hidden="true">|</span>
-                <span class="publication-stars" title="Live GitHub star count">
-                  <img
-                    src="https://img.shields.io/github/stars/yourname/ReasonGraph?style=flat&amp;logo=github&amp;label=stars"
-                    alt="GitHub stars"
-                    width="82"
-                    height="20"
-                    loading="lazy"
-                  >
-                </span>
-              </div>
-              <p class="publication-summary">
-                One-sentence summary: making LLM reasoning verifiable by decoding it onto a
-                knowledge graph.（示例条目，请替换）
-              </p>
-            </div>
-          </article>
-
-          <!-- PUBLICATION 3 -->
-          <article class="publication">
-            <div class="publication-media-cell">
-              <div class="publication-media" data-publication-media>
-                <a
-                  class="publication-media__link"
-                  href="#"
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label="Open the EmboLoop paper"
-                >
-                  <img
-                    src="assets/images/publications/emboloop.svg"
-                    alt="EmboLoop teaser: a closed-loop robot arm sketch"
-                    width="320"
-                    height="320"
-                    loading="lazy"
-                    decoding="async"
-                  >
-                </a>
-              </div>
-            </div>
-
-            <div class="publication-body">
-              <h3 class="publication-title">
-                <a href="#" target="_blank" rel="noreferrer">
-                  EmboLoop: Learning Interactive Policies from Real-World Trial and Error
-                </a>
-              </h3>
-              <p class="publication-authors">
-                <strong>Ming Chen</strong><sup aria-label="Equal contribution and project lead">*⚑</sup>,
-                Another Li, Someone Wang, Yusheng Zhang<sup>†</sup>
-              </p>
-              <p class="publication-venue">
-                <em>IEEE International Conference on Robotics and Automation
-                <strong>(ICRA)</strong>, 2026</em>
-              </p>
-              <div class="publication-actions" aria-label="Links for EmboLoop">
-                <a href="#" target="_blank" rel="noreferrer">paper</a>
-                <span aria-hidden="true">|</span>
-                <a href="#" target="_blank" rel="noreferrer">website</a>
-              </div>
-              <p class="publication-summary">
-                One-sentence summary: an embodied agent that improves by acting in the real
-                world.（示例条目，请替换）
-              </p>
-            </div>
-          </article>
-
-          <!-- PUBLICATION 4 -->
-          <article class="publication">
-            <div class="publication-media-cell">
-              <div class="publication-media" data-publication-media>
-                <a
-                  class="publication-media__link"
-                  href="#"
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label="Open the SimForge paper"
-                >
-                  <img
-                    src="assets/images/publications/simforge.svg"
-                    alt="SimForge teaser: a wireframe grid of cubes"
-                    width="320"
-                    height="320"
-                    loading="lazy"
-                    decoding="async"
-                  >
-                </a>
-              </div>
-            </div>
-
-            <div class="publication-body">
-              <h3 class="publication-title">
-                <a href="#" target="_blank" rel="noreferrer">
-                  SimForge: Scalable Real-to-Sim Generation for Physical Intelligence
-                </a>
-              </h3>
-              <p class="publication-authors">
-                Another Li, <strong>Ming Chen</strong>, Someone Wang
-              </p>
-              <p class="publication-venue">
-                <em>IEEE Transactions on Visualization and Computer Graphics
-                <strong>(TVCG)</strong>, 2026</em>
-              </p>
-              <div class="publication-actions" aria-label="Links for SimForge">
-                <a href="#" target="_blank" rel="noreferrer">paper</a>
-              </div>
-              <p class="publication-summary">
-                One-sentence summary: turning RGB-D videos into structured simulation assets.
-                （示例条目，请替换）
-              </p>
-            </div>
-          </article>
+          <!-- PUBLICATION 1（最新论文放最前）：从 templates/publications.html 复制 <article> 到此 -->
+          <p class="publication-placeholder">To appear. 敬请期待。</p>
         </div>
       </section>
 
       <!-- ============================================================
+           News：暂无动态。有第一条新闻后，从 templates/news.html
+           复制整段 <section> 到这里（Education 之前）即可。
+           ============================================================ -->
+
+      <!-- ============================================================
+           Publications：暂无论文。第一篇论文出来后，从
+           templates/publications.html 复制整段 <section> 到这里，
+           按 <article class="publication"> 块复制改写即可。
+           ============================================================ -->
+
+      <!-- ============================================================
            Education：左「学校 · 学位」，右「年份」
+           （起始年份为推测，请按实际情况修改）
            ============================================================ -->
       <section class="content-section compact-list" aria-labelledby="education-title">
         <h2 class="section-title" id="education-title">Education</h2>
         <ul>
           <li>
-            <span>Xinghuo University · Ph.D. in Computer Science</span>
-            <span>2024 – Present</span>
+            <span>National University of Defense Technology · Ph.D. Student, Combined
+            Master's&ndash;Ph.D. Program <span lang="zh-Hans">（硕博连读）</span></span>
+            <span>2025 – Present</span>
           </li>
           <li>
-            <span>Another University · B.S. in Automation</span>
-            <span>2020 – 2024</span>
+            <span>National University of Defense Technology · B.S.</span>
+            <span>2021 – 2025</span>
           </li>
         </ul>
       </section>
@@ -515,7 +323,7 @@
 
     <footer class="site-footer">
       <p>
-        © <span data-year>2026</span> Ming Chen · Built with plain HTML / CSS / JS.
+        © <span data-year>2026</span> Zhiyu Tang · Built with plain HTML / CSS / JS.
         Template inspired by
         <a href="https://attractor.do/" target="_blank" rel="noreferrer">attractor.do</a>
         &amp;

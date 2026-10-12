@@ -1,0 +1,65 @@
+<!-- ============================================================
+     Publications 板块模板
+     用法：第一篇论文出来后，把下面整段 <section> 复制到 index.html
+     中 Education 板块之前；每篇论文一个 <article class="publication">，
+     复制一块改字段即可（标题 / 作者 / 会议 / 链接 / 一句话总结 / 配图）。
+     标记说明：* 共同一作 · † 通讯作者 · ⚑ 项目负责人
+     配图放在 assets/images/publications/ 下（建议 640x640 方图）。
+     GitHub star 徽章：把 shields.io 链接里的 你的用户名/仓库名 改成
+     真实仓库；不用就删掉那个 <span class="publication-stars">。
+     ============================================================ -->
+<section class="content-section" aria-labelledby="publications-title">
+  <h2 class="section-title" id="publications-title">Publications</h2>
+  <p class="publication-note">
+    <span>Equal Contribution <span class="publication-note__marker">*</span>,</span>
+    <span>Corresponding Author <span class="publication-note__marker">†</span>,</span>
+    <span>Project Lead <span class="publication-note__marker">⚑</span></span>
+  </p>
+
+  <div class="publication-list">
+    <!-- PUBLICATION 1（最新论文放最前） -->
+    <article class="publication">
+      <div class="publication-media-cell">
+        <div class="publication-media" data-publication-media>
+          <a
+            class="publication-media__link"
+            href="论文链接"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Open the paper"
+          >
+            <img
+              src="assets/images/publications/配图文件名.svg"
+              alt="论文配图简述"
+              width="320"
+              height="320"
+              decoding="async"
+            >
+          </a>
+        </div>
+      </div>
+
+      <div class="publication-body">
+        <h3 class="publication-title">
+          <a href="论文链接" target="_blank" rel="noreferrer">论文标题（英文）</a>
+        </h3>
+        <p class="publication-authors">
+          <strong>Zhiyu Tang</strong><sup>*</sup>, Someone Wang, Tiejun Li<sup>†</sup>
+        </p>
+        <p class="publication-venue">
+          <em>会议或期刊全称 <strong>(缩写)</strong>, 年份</em>
+        </p>
+        <div class="publication-actions" aria-label="Links for this paper">
+          <a href="论文链接" target="_blank" rel="noreferrer">paper</a>
+          <span aria-hidden="true">|</span>
+          <a href="arXiv链接" target="_blank" rel="noreferrer">arXiv</a>
+          <span aria-hidden="true">|</span>
+          <a href="代码仓库链接" target="_blank" rel="noreferrer">code</a>
+        </div>
+        <p class="publication-summary">一句话总结这篇论文做了什么。</p>
+      </div>
+    </article>
+
+    <!-- 更多论文：复制上面整个 <article> 到此处，改字段即可 -->
+  </div>
+</section>
