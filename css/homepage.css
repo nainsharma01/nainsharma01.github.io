@@ -1,0 +1,607 @@
+/* ==========================================================================
+   Personal academic homepage stylesheet
+   Style inspired by attractor.do (which itself adapts Jon Barron's page).
+   Design tokens are gathered in :root — tweak them to re-skin the whole site.
+   ========================================================================== */
+
+:root {
+  --page-width: 50rem;            /* 800px content column */
+  --text-color: #000;
+  --muted-color: #6b6a67;
+  --link-color: #1772d0;
+  --link-hover: #f09228;
+  --border-color: rgba(0, 0, 0, 0.12);
+  --bg-color: #fff;
+  --body-size: 0.875rem;          /* 14px */
+  --body-line-height: 1.55;
+  --font-stack: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
+    Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  --shadow-portrait: 8px 16px 48px rgba(17, 12, 46, 0.18);
+  --shadow-media: 6px 12px 32px rgba(17, 12, 46, 0.16);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-stack);
+  font-size: var(--body-size);
+  line-height: var(--body-line-height);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: underline;
+  text-decoration-color: currentColor;
+  text-underline-offset: 2px;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--link-hover);
+}
+
+::selection {
+  background: rgba(240, 146, 40, 0.25);
+}
+
+:focus-visible {
+  outline: 2px solid var(--link-color);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* ---------- accessibility helpers ---------- */
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -3rem;
+  z-index: 20;
+  background: var(--text-color);
+  color: var(--bg-color);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ---------- page shell ---------- */
+
+.site-shell {
+  max-width: var(--page-width);
+  margin: 0 auto;
+  padding: 3.5rem 1.25rem 0;
+  outline: none;
+}
+
+/* ---------- profile header ---------- */
+
+.profile-header__layout {
+  display: grid;
+  grid-template-columns: 1fr 12.5rem;
+  grid-template-areas:
+    "identity portrait"
+    "introduction portrait"
+    "links portrait";
+  column-gap: 2.5rem;
+  row-gap: 1.25rem;
+}
+
+.profile-identity {
+  grid-area: identity;
+}
+
+.profile-name-row {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  white-space: nowrap;
+}
+
+.profile-name-row h1 {
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+}
+
+.profile-name-zh {
+  color: var(--muted-color);
+  font-size: 0.875rem;
+  margin-left: 0.75rem;
+}
+
+.profile-introduction {
+  grid-area: introduction;
+  max-width: 38rem;
+}
+
+.profile-introduction p + p {
+  margin-top: 0.625rem;
+}
+
+.profile-introduction__highlight {
+  color: var(--text-color);
+  font-weight: 700;
+}
+
+/* links row: Email / CV / Scholar / GitHub / WeChat */
+
+.profile-links {
+  grid-area: links;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.profile-links__separator {
+  color: var(--muted-color);
+  user-select: none;
+}
+
+.profile-link--button {
+  font: inherit;
+  color: var(--link-color);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.2s ease;
+}
+
+.profile-link--button:hover {
+  color: var(--link-hover);
+}
+
+/* email + WeChat popovers */
+
+.profile-contact {
+  position: relative;
+  display: inline-flex;
+}
+
+.profile-contact__popover {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  box-shadow: 0 6px 24px rgba(17, 12, 46, 0.12);
+  padding: 0.375rem 0.625rem;
+  white-space: nowrap;
+  z-index: 10;
+}
+
+.profile-contact__popover--email {
+  font-size: 0.8125rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease;
+}
+
+.profile-contact:hover .profile-contact__popover--email,
+.profile-contact:focus-within .profile-contact__popover--email,
+.profile-contact__popover--email.is-copied {
+  opacity: 1;
+  visibility: visible;
+}
+
+.profile-contact__popover--wechat {
+  padding: 0.5rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease;
+}
+
+.profile-contact--wechat:hover .profile-contact__popover--wechat,
+.profile-contact--wechat:focus-within .profile-contact__popover--wechat,
+.profile-contact--wechat.is-open .profile-contact__popover--wechat {
+  opacity: 1;
+  visibility: visible;
+}
+
+.profile-contact__popover--wechat img {
+  display: block;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 4px;
+}
+
+/* portrait: circular photo, hover swaps to the alternate image */
+
+.profile-portrait {
+  grid-area: portrait;
+  position: relative;
+  width: 12.5rem;
+  height: 12.5rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  justify-self: center;
+  align-self: center;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.profile-portrait:hover,
+.profile-portrait:focus-visible {
+  box-shadow: var(--shadow-portrait);
+  transform: translateY(-2px);
+}
+
+.profile-portrait__image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.25s ease;
+}
+
+.profile-portrait__image--alternate {
+  opacity: 0;
+}
+
+.profile-portrait:hover .profile-portrait__image--primary,
+.profile-portrait:focus-visible .profile-portrait__image--primary {
+  opacity: 0;
+}
+
+.profile-portrait:hover .profile-portrait__image--alternate,
+.profile-portrait:focus-visible .profile-portrait__image--alternate {
+  opacity: 1;
+}
+
+/* ---------- sections ---------- */
+
+.content-section {
+  margin-top: 1rem;
+}
+
+.section-title {
+  font-size: 1.375rem;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  margin: 2.5rem 0 1rem;
+}
+
+/* ---------- research: hover-to-reveal citations ---------- */
+
+.research-heading {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.research-heading__note {
+  color: var(--muted-color);
+  font-size: 0.75rem;
+}
+
+.research-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.research-vision,
+.research-goal {
+  max-width: 38rem;
+}
+
+.research-goal__marker {
+  color: var(--muted-color);
+  margin-right: 0.25rem;
+}
+
+/* the citation block: hidden (grid-rows 0fr) until the statement is
+   hovered or focused, then it expands in place */
+
+.research-hover-note {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.35s ease, opacity 0.35s ease;
+  opacity: 0;
+  color: var(--muted-color);
+}
+
+.research-hover-note > p {
+  overflow: hidden;
+  min-height: 0;
+}
+
+.research-hover-note cite {
+  font-style: normal;
+  font-size: 0.75rem;
+  margin-left: 0.375rem;
+  opacity: 0.75;
+}
+
+.research-vision:hover + .research-vision__note,
+.research-vision:focus-visible + .research-vision__note,
+.research-vision__note:target {
+  grid-template-rows: 1fr;
+  opacity: 1;
+}
+
+.research-point {
+  display: flex;
+  flex-direction: column;
+}
+
+.research-goal:hover + .research-point__note,
+.research-goal:focus-visible + .research-point__note {
+  grid-template-rows: 1fr;
+  opacity: 1;
+}
+
+.research-vision__note p,
+.research-point__note p {
+  text-align: right;
+  padding-top: 0.25rem;
+}
+
+/* ---------- compact lists (News / Education / optional sections) ---------- */
+
+.compact-list ul {
+  list-style: none;
+  max-width: 42.5rem;
+}
+
+.compact-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1.5rem;
+  padding: 0.375rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.compact-list li:last-child {
+  border-bottom: none;
+}
+
+.compact-list li span:last-child {
+  color: var(--muted-color);
+  font-size: 0.75rem;
+  white-space: nowrap;
+}
+
+/* ---------- publications ---------- */
+
+.publication-note {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem 0.75rem;
+  color: var(--muted-color);
+  font-size: 0.8125rem;
+  margin-bottom: 1.5rem;
+}
+
+.publication-note__marker {
+  color: var(--text-color);
+}
+
+.publication {
+  display: grid;
+  grid-template-columns: 11.25rem 1fr;
+  column-gap: 1.25rem;
+  row-gap: 0.5rem;
+}
+
+.publication + .publication {
+  margin-top: 1.75rem;
+}
+
+.publication-media-cell {
+  grid-row: span 2;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 11.25rem;
+}
+
+.publication-media {
+  width: 10rem;
+  height: 10rem;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  overflow: hidden;
+  background: #fafafa;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.publication-media:hover {
+  box-shadow: var(--shadow-media);
+  transform: translateY(-2px);
+}
+
+.publication-media__link {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.publication-media img,
+.publication-media video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.publication-body {
+  min-width: 0;
+}
+
+.publication-title {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.publication-title a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.publication-title a:hover {
+  color: var(--link-hover);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.publication-authors {
+  margin-top: 0.25rem;
+  font-size: 0.8125rem;
+}
+
+.publication-venue {
+  margin-top: 0.25rem;
+  font-size: 0.875rem;
+}
+
+.publication-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.375rem;
+  margin-top: 0.375rem;
+}
+
+.publication-actions > span[aria-hidden] {
+  color: var(--muted-color);
+}
+
+.publication-actions a {
+  font-size: 0.8125rem;
+}
+
+.publication-stars img {
+  display: block;
+  height: 20px;
+}
+
+.publication-summary {
+  margin-top: 0.375rem;
+  color: var(--muted-color);
+  font-size: 0.8125rem;
+  max-width: 38rem;
+}
+
+/* ---------- footer ---------- */
+
+.site-footer {
+  max-width: var(--page-width);
+  margin: 3.5rem auto 0;
+  padding: 1.5rem 1.25rem 2.5rem;
+  border-top: 1px solid var(--border-color);
+  text-align: center;
+  color: var(--muted-color);
+  font-size: 0.75rem;
+}
+
+/* ---------- responsive ---------- */
+
+@media (max-width: 640px) {
+  .site-shell {
+    padding-top: 2.5rem;
+  }
+
+  /* 弹层锚定到按钮左/右边缘，避免在窄屏溢出 */
+  .profile-contact__popover--email {
+    left: 0;
+    transform: none;
+  }
+
+  .profile-contact__popover--wechat {
+    left: auto;
+    right: 0;
+    transform: none;
+  }
+
+  .profile-header__layout {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "portrait"
+      "identity"
+      "introduction"
+      "links";
+    justify-items: center;
+    text-align: left;
+  }
+
+  .profile-portrait {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  .profile-introduction {
+    max-width: none;
+  }
+
+  .publication {
+    grid-template-columns: 1fr;
+  }
+
+  .publication-media-cell {
+    grid-row: auto;
+    width: auto;
+    justify-content: flex-start;
+  }
+
+  .compact-list li {
+    flex-direction: column;
+    gap: 0.125rem;
+  }
+}
+
+/* ---------- reduced motion ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}

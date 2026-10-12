@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320">
+  <!-- 论文 teaser 占位图：替换为论文第一页图或效果图，建议 640x640 -->
+  <rect width="320" height="320" fill="#f1f6fb"/>
+  <g stroke="#c9dcee" stroke-width="1">
+    <path d="M0 80h320M0 160h320M0 240h320M80 0v320M160 0v320M240 0v320" opacity="0.6"/>
+  </g>
+  <circle cx="160" cy="160" r="96" fill="#ffffff" opacity="0.85"/>
+  <circle cx="160" cy="160" r="96" fill="none" stroke="#1772d0" stroke-width="2.5"/>
+  <circle cx="160" cy="160" r="64" fill="none" stroke="#1772d0" stroke-width="1.5" stroke-dasharray="5 5"/>
+  <circle cx="160" cy="160" r="32" fill="none" stroke="#4b93dd" stroke-width="1.5"/>
+  <circle cx="160" cy="160" r="7" fill="#f09228"/>
+  <g stroke="#1772d0" stroke-width="1.5">
+    <path d="M160 64v-28M160 256v28M64 160H36M256 160h28"/>
+    <path d="M92 92 72 72M228 92l20-20M92 228l-20 20M228 228l20 20"/>
+  </g>
+  <g fill="#1772d0">
+    <circle cx="160" cy="36" r="4"/><circle cx="160" cy="284" r="4"/>
+    <circle cx="36" cy="160" r="4"/><circle cx="284" cy="160" r="4"/>
+  </g>
+  <circle cx="196" cy="124" r="5" fill="#f09228"/>
+  <circle cx="124" cy="196" r="5" fill="#f09228"/>
+  <path d="M196 124 124 196" stroke="#f09228" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <text x="160" y="304" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#6b7f96">scenelang.svg · 论文配图占位</text>
+</svg>

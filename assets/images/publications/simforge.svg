@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320">
+  <!-- 论文 teaser 占位图：替换为论文第一页图或效果图，建议 640x640 -->
+  <rect width="320" height="320" fill="#f3f2f7"/>
+  <g stroke="#d9d7e4" stroke-width="1">
+    <path d="M0 40h320M0 120h320M0 200h320M0 280h320M40 0v320M120 0v320M200 0v320M280 0v320" opacity="0.6"/>
+  </g>
+  <g stroke="#6f74a0" stroke-width="1.6" fill="none">
+    <!-- cube 1 -->
+    <path d="M64 150 96 132l32 18v36l-32 18-32-18zM96 132v36M96 168l32 18M96 168l-32 18"/>
+    <!-- cube 2 -->
+    <path d="M192 150 224 132l32 18v36l-32 18-32-18zM224 132v36M224 168l32 18M224 168l-32 18"/>
+    <!-- cube 3 -->
+    <path d="M128 84 160 66l32 18v36l-32 18-32-18zM160 66v36M160 102l32 18M160 102l-32 18"/>
+  </g>
+  <path d="M128 84 160 66l32 18-32 18z" fill="#5c61a8" opacity="0.25"/>
+  <path d="M192 150 224 132l32 18-32 18z" fill="#f09228" opacity="0.3"/>
+  <circle cx="160" cy="160" r="86" fill="none" stroke="#5c61a8" stroke-width="1.5" stroke-dasharray="7 7" opacity="0.6"/>
+  <text x="160" y="304" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#8b8fa8">simforge.svg · 论文配图占位</text>
+</svg>
